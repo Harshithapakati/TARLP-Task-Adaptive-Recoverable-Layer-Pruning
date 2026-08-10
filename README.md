@@ -1,5 +1,4 @@
 # TARLP: Task-Adaptive Recoverable Layer Pruning
-
 A structured compression framework for BERT that identifies and removes 
 redundant encoder layers using a combined gradient-based and probe-based 
 importance criterion — without knowledge distillation.
@@ -17,14 +16,14 @@ important layers, followed by a short recovery fine-tuning phase.
 ## Key Results
 | Model | Layers | SST-2 Accuracy | FLOPs |
 |-------|--------|----------------|-------|
-| BERT (full) | 12 | 92.43% | 100% |
+| BERT (full) | 12 | 89.22% | 100% |
 | DistilBERT | 6 | 91.06% | 50% |
-| TinyBERT | 4 | 85.09% | 6% |
-| **TARLP-25% (ours)** | **9** | **91.09%** | **75%** |
-| TARLP-50% (ours) | 6 | 89.56% | 50% |
+| TinyBERT | 4 | 85.21% | 6% |
+| **TARLP-25% (ours)** | **9** | **88.99%** | **75%** |
+| TARLP-50% (ours) | 6 | 84.59% | 50% |
 
-TARLP-25% matches DistilBERT accuracy without any knowledge distillation.  
-Outperforms TinyBERT by 6% (p = 0.001).
+TARLP-25% retains 75% of BERT's FLOPs while outperforming TinyBERT 
+without any knowledge distillation.
 
 ## Evaluated On
 - SST-2 (sentiment classification)
